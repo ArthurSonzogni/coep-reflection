@@ -2,6 +2,7 @@
 - [HTML original discussion](https://github.com/whatwg/html/issues/7912)
 - [HTML specification PR](https://github.com/whatwg/html/pull/7948)
 - [Security/Privacy questionnaire](./security-privacy-questionnaire.md)
+- [w3ctag review](https://github.com/w3ctag/design-reviews/issues/742)
 
 ### Description 
 Add the API:
