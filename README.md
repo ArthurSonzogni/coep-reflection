@@ -42,8 +42,8 @@ in between inserting a normal or an anonymous iframe.
 
 The API was added inside the global object, similarly to `crossOriginIsolated`:
 ```js
-window.crossOriginIsolated
-window.crossOriginEmbedderPolicy
+window.crossOriginIsolated         [pre-existing]
+window.crossOriginEmbedderPolicy   [new]
 ```
 
 Should we continue adding API one by one, inside the global object?
