@@ -5,6 +5,7 @@
 - [w3ctag review](https://github.com/w3ctag/design-reviews/issues/742)
 - [Chrome status](https://chromestatus.com/feature/5074103873568768)
 - [Mozilla: request for position](https://github.com/mozilla/standards-positions/issues/645)
+- [Webkit: request for position](https://lists.webkit.org/pipermail/webkit-dev/2022-May/032258.html)
 
 ### Description 
 Add the API:
