@@ -4,7 +4,7 @@
 - [Security/Privacy questionnaire](./security-privacy-questionnaire.md)
 - [w3ctag review](https://github.com/w3ctag/design-reviews/issues/742)
 - [Chrome status](https://chromestatus.com/feature/5074103873568768)
-- [Mozilla: request for position](https://github.com/mozilla/standards-positions/issues/645): Pending.
+- [Mozilla: request for position](https://github.com/mozilla/standards-positions/issues/645): ["it should be fine from our side"](https://github.com/mozilla/standards-positions/issues/645#issuecomment-1160546542).
 - [Webkit: request for position](https://lists.webkit.org/pipermail/webkit-dev/2022-May/032258.html): ["Seems reasonnable"](https://lists.webkit.org/pipermail/webkit-dev/2022-June/032259.html).
 ### Description 
 Add the API:
