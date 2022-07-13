@@ -47,7 +47,7 @@ was asked [here].
 [here]: https://bugs.chromium.org/p/chromium/issues/detail?id=1335034#c10:~:text=actions.%20%0A%0AIn%20the%20meantime%2C%20what%20possible%20solutions%3F-,Is%20there%20a%20way%20to%20detect%20this%20kind%20of%20header,-and%20don%27t%20inject%20iFrames%20(without%20asking%20for
 
 In particular, COEP reflection was originally part of the [Anonymous
-Iframe](https://github.com/WICG/anonymous-iframe) proposal. Since it is useful on
+Iframe](https://github.com/w3ctag/design-reviews/issues/639) proposal. Since it is useful on
 its own, it became in independent mini-proposal.
 To use anonymous iframe, third party script needs to know if the `<iframe>` they
 are going to create will be blocked by COEP or not. By using COEP reflection,
