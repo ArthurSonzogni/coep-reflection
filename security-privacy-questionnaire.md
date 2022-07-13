@@ -4,23 +4,35 @@
 
 It exposes the current environment's crossOriginEmbedderPolicy's value:
 ```js
-self.crossOriginEmbedderPolicy = ('unsafe-none' | 'credentialless' | 'require-corp');
+window.crossOriginEmbedderPolicy = ('unsafe-none' | 'credentialless' | 'require-corp');
 ```
 
 Depending on the Cross-Origin-Embedder-Policy value, not every
 iframe/subresources can be loaded inside the document. By using this new API, 
-3rd party script can take better decisions and implement appropriate fallbacks.
+3rd party script can take better decisions. They can implement appropriate
+fallbacks.
 
-It is already possible to deduce the value returned by the API, by making a
-no-cors `fetch` request toward a known cross-origin URL whose response depends
-on the request's cookies and omit the CORP headers.
+This is a reflection API. It reflects the value the server set to its own
+document, so there are no new information revealed to the document. It is just
+easier to access using JavaScript.
 
-It is costly, but theoretically polyfillable. As such, it should be a
-security/privacy no-op.
+Third party script can also use this API. It is useful to know what kind of
+policy the current document/worker is subject to. Unless proven otherwise
+knowing this is not a concern. Anyway, it is already deducible via other means,
+by observing the effects of COEP. It should be polyfillable. As such, it should
+be a security/privacy no-op.
+
+Example of a polyfill:
+- `fetch()` a known collaborating cross-origin URL in `no-cors` mode.
+- The server reply with the request credentials and omits a CORP header.
+- Set window.crossOriginEmbedderPolicy to:
+  - `require-corp` if the response was blocked.
+  - `credentialless` if the request omitted credentials.
+  - `unsafe-none` otherwise.
 
 ### 02.  Do features in your specification expose the minimum amount of information necessary to enable their intended uses?
 
-Yes.
+Yes. We expose a single value.
 
 In particular, we do expose neither the
 `Cross-Origin-Embedder-Policy-Report-Only` nor the potential report endpoints.
